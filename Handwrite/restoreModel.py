@@ -12,18 +12,6 @@ x_test = tf.keras.utils.normalize(x_test, axis = 1)
 
 # ============================================================================================
 
-def create_model():
-    model = tf.keras.models.Sequential([
-        tf.keras.layers.Flatten(),
-        tf.keras.layers.Dense(128, activation=tf.nn.relu),
-        tf.keras.layers.Dense(128, activation=tf.nn.relu),
-        tf.keras.layers.Dense(10, activation=tf.nn.softmax)
-    ])
-
-    model.compile(optimizer=tf.keras.optimizers.Adam(),
-                  loss=tf.keras.losses.sparse_categorical_crossentropy,
-                  metrics=['accuracy'])
-    return model
 
 
 
