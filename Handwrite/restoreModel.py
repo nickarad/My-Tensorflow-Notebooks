@@ -1,5 +1,7 @@
 import tensorflow as tf
 from tensorflow import keras
+import matplotlib.pyplot as plt
+import numpy as np
 
 # ===================== Datasets ============================================================
 mnist = tf.keras.datasets.mnist
@@ -22,3 +24,13 @@ loss, acc = new_model.evaluate(x_test_reshaped, y_test)
 print("Restored model, accuracy {:5.2f}%".format(100*acc))
 
 # ===========================================================================================
+
+# ================================ Make predictions==========================================
+predictions = new_model.predict(x_test_reshaped)
+print("prediction:", np.argmax(predictions[9]))
+print("real value:", y_test[9])
+
+# print(np.argmax(predictions[8]))
+plt.imshow(x_test[9], cmap=plt.cm.binary)
+plt.show()
+# ============================================================================================
