@@ -6,7 +6,7 @@ import numpy as np
 import createmodel
 from tensorflow import keras
 
-from keras.models import model_from_json
+# from keras.models import model_from_json
 
 # print(tf.__version__)
 
@@ -25,8 +25,10 @@ x_train_reshaped = x_train.reshape(-1, 28*28)
 
 x_test = tf.keras.utils.normalize(x_test, axis = 1)
 x_test_reshaped = x_test.reshape(-1, 28*28)
-
-# print(x_train[0])
+# print(y_train)
+# print(type(y_train))
+# print(y_train.shape)
+# print(x_train_reshaped)
 
 
 # -- fit model
