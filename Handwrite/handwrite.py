@@ -5,7 +5,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import createmodel
 from tensorflow import keras
-
+import warnings
+warnings.filterwarnings("ignore")
 # from keras.models import model_from_json
 
 # print(tf.__version__)
